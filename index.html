@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitro Wash | Mobile Detailing en Puerto Rico</title>
+<meta name="description" content="Detailing profesional donde esté tu carro: casa, trabajo o condominio. Lavado, pulido, sellado y cerámico. Reserva por WhatsApp.">
+<link rel="canonical" href="https://nitrowashpr.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nitro Wash | Mobile Detailing en Puerto Rico">
+<meta property="og:description" content="El detalle completo llega a tu driveway. Reserva por WhatsApp.">
+<meta property="og:image" content="https://nitrowashpr.com/og.png">
+<meta name="theme-color" content="#0D0F12">
+<style>
+@font-face{font-family:'Barlow Condensed';src:url('fuentes/bc-bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url('fuentes/bc-semi.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fuentes/b-reg.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* Paleta sacada del logo: negro insignia, naranja NITRO, volt de MOBILE DETAILING,
+   azul hielo de WASH y el agua. El acento que manda es el naranja; el volt solo
+   etiqueta; el azul hielo vive en el agua y las fotos. */
+:root{
+  color-scheme:dark;
+  --negro:#0D0F12;
+  --panel:#151920;
+  --panel-2:#1B2028;
+  --tinta:#F4F6F8;
+  --mut:#A7B0BA;
+  --linea:rgba(244,246,248,.12);
+  --nitro:#FF6B1A;
+  --nitro-hondo:#E8520A;
+  --volt:#B8E62E;
+  --hielo:#3FB4EF;
+  --r:10px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--negro);color:var(--tinta);font-family:'Barlow',system-ui,sans-serif;font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+
+.env{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* ---- barra superior ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(13,15,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{height:44px;width:auto}
+.wordmark{font-family:'Barlow Condensed';font-weight:700;font-size:26px;letter-spacing:.02em;line-height:1;color:#fff;font-style:italic;text-transform:uppercase}
+.wordmark b{color:var(--nitro)}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{font-size:15px;color:var(--mut);text-decoration:none;font-weight:600}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Barlow Condensed';font-weight:700;font-size:19px;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;border-radius:var(--r);padding:13px 22px;border:1px solid transparent;transition:transform .15s ease,background .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-nitro{background:var(--nitro);color:#14100C}
+.btn-nitro:hover{background:var(--nitro-hondo)}
+.btn-linea{border-color:var(--linea);color:var(--tinta)}
+.btn-linea:hover{border-color:var(--mut)}
+
+/* ---- hero ---- */
+.hero{padding:56px 0 30px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed';font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--volt);margin-bottom:16px}
+.kicker::before{content:'';width:26px;height:2px;background:var(--volt)}
+h1{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(40px,6vw,62px);line-height:1.02;letter-spacing:-.01em;text-transform:uppercase}
+h1 .wash{color:var(--hielo)}
+.sub{color:var(--mut);font-size:18px;margin:16px 0 26px;max-width:46ch}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.nota-hero{margin-top:14px;font-size:14px;color:var(--mut)}
+.nota-hero b{color:var(--tinta);font-weight:600}
+
+/* ---- comparador antes/despues: la firma ---- */
+.compara{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--linea);aspect-ratio:16/11;background:var(--panel);user-select:none;touch-action:pan-y}
+.capa{position:absolute;inset:0}
+.capa.sucia{background:
+  radial-gradient(120% 90% at 20% 10%,#3A342B 0%,transparent 60%),
+  radial-gradient(90% 80% at 85% 85%,#2E2A24 0%,transparent 55%),
+  repeating-linear-gradient(105deg,#33302A 0 14px,#2C2923 14px 28px)}
+.capa.limpia{background:
+  linear-gradient(160deg,#10161D 0%,#16222E 45%,#0E1B23 100%)}
+.brillo{position:absolute;inset:0;background:
+  linear-gradient(115deg,transparent 42%,rgba(63,180,239,.16) 48%,transparent 54%),
+  linear-gradient(115deg,transparent 66%,rgba(255,255,255,.07) 70%,transparent 75%)}
+.etiqueta{position:absolute;top:12px;font-family:'Barlow Condensed';font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:6px;background:rgba(13,15,18,.72);border:1px solid var(--linea)}
+.etiqueta.a{left:12px;color:var(--mut)}
+.etiqueta.d{right:12px;color:var(--hielo)}
+.demo-sello{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);font-size:11px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
+.mango{position:absolute;top:0;bottom:0;width:2px;background:var(--volt);left:50%;cursor:ew-resize}
+.mango::after{content:'◂ ▸';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--volt);color:#101206;font-size:12px;font-weight:700;padding:7px 8px;border-radius:99px;line-height:1;white-space:nowrap}
+.pata{display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:13px;color:var(--mut)}
+.pata b{color:var(--tinta)}
+
+/* ---- cinta de hechos ---- */
+.cinta{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);margin-top:44px}
+.cinta-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 28px;padding:16px 0}
+.hecho{display:flex;align-items:center;gap:9px;font-size:15px;color:var(--mut)}
+.hecho svg{flex:none}
+.hecho b{color:var(--tinta);font-weight:600}
+
+/* ---- secciones ---- */
+.sec{padding:58px 0}
+.sec-t{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(28px,4vw,38px);text-transform:uppercase;line-height:1.05;margin-bottom:8px}
+.sec-s{color:var(--mut);max-width:60ch;margin-bottom:28px}
+
+/* paquetes */
+.paks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pak{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px}
+.pak.top{border-color:var(--nitro);box-shadow:0 0 0 1px var(--nitro) inset}
+.tag{align-self:flex-start;font-family:'Barlow Condensed';font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--volt);color:#14100C;padding:3px 9px;border-radius:5px}
+.pak h3{font-family:'Barlow Condensed';font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:.02em}
+.precio{font-family:'Barlow Condensed';font-weight:700;font-size:34px;color:var(--nitro)}
+.precio small{font-size:16px;color:var(--mut);font-weight:600;letter-spacing:.06em}
+.pak ul{list-style:none;display:flex;flex-direction:column;gap:7px;font-size:15px;color:var(--mut);flex:1}
+.pak li{display:flex;gap:8px;align-items:flex-start}
+.pak li::before{content:'✓';color:var(--volt);font-weight:700;flex:none}
+.pak .btn{margin-top:6px}
+.aviso-precio{margin-top:14px;font-size:13px;color:var(--mut)}
+
+/* como funciona */
+.pasos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:paso}
+.paso{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);padding:20px}
+.paso::before{counter-increment:paso;content:"0" counter(paso);font-family:'Barlow Condensed';font-weight:700;font-size:40px;color:var(--nitro);display:block;line-height:1;margin-bottom:10px}
+.paso h3{font-family:'Barlow Condensed';font-weight:600;font-size:21px;text-transform:uppercase;margin-bottom:6px}
+.paso p{color:var(--mut);font-size:15px}
+
+/* cobertura */
+.zona{display:flex;flex-wrap:wrap;gap:9px}
+.chip{font-family:'Barlow Condensed';font-weight:600;font-size:16px;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--linea);border-radius:99px;padding:7px 15px;color:var(--mut)}
+.requisito{margin-top:18px;background:var(--panel);border-left:3px solid var(--hielo);border-radius:0 var(--r) var(--r) 0;padding:14px 16px;font-size:15px;color:var(--mut);max-width:70ch}
+.requisito b{color:var(--tinta)}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:10px;max-width:76ch}
+details{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r)}
+summary{cursor:pointer;list-style:none;padding:15px 18px;font-family:'Barlow Condensed';font-weight:600;font-size:19px;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--nitro);font-size:22px;line-height:1}
+details[open] summary::after{content:'–'}
+details p{padding:0 18px 16px;color:var(--mut);font-size:15px}
+
+/* contacto / footer */
+.contacto{background:var(--panel);border:1px solid var(--linea);border-radius:14px;padding:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center}
+.contacto h2{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(28px,4vw,38px);text-transform:uppercase;line-height:1.05}
+.contacto p{color:var(--mut);margin-top:8px;max-width:52ch}
+footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-size:13.5px;color:var(--mut)}
+.foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:36px}
+  .paks,.pasos{grid-template-columns:1fr}
+  .nav-in{gap:10px}
+  .nav-links{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:auto}
+  .nav-links::-webkit-scrollbar{display:none}
+  .contacto{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="env nav-in">
+    <!-- LOGO: reemplazar el wordmark por
+         <img src="assets/logo.png" alt="Nitro Wash - Mobile Detailing"> cuando llegue el archivo -->
+    <a class="marca" href="#">
+      <span class="wordmark"><b>Nitro</b> Wash</span>
+    </a>
+    <div class="nav-links">
+      <a href="#paquetes">Paquetes</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#zona">Cobertura</a>
+      <a class="btn btn-nitro" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20detalle" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="env hero">
+  <div>
+    <span class="kicker">Mobile detailing · Puerto Rico</span>
+    <h1>Tu carro sale <span class="wash">brillando</span> sin moverte de tu casa.</h1>
+    <p class="sub">Lavado, pulido y sellado profesional donde esté tu carro: casa, trabajo o condominio. Tú reservas por WhatsApp, nosotros llegamos.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-nitro" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20detalle" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+      <a class="btn btn-linea" href="#paquetes">Ver paquetes</a>
+    </div>
+    <p class="nota-hero">Llevamos nuestra propia agua y corriente. <b>No te pedimos nada.</b></p>
+  </div>
+
+  <!-- FIRMA: comparador antes/despues. Los paneles son demo con datos simulados;
+       se reemplazan por fotos reales del primer carro terminado (img ANTES / img DESPUES). -->
+  <div>
+    <div class="compara" id="compara">
+      <div class="capa limpia"><div class="brillo"></div></div>
+      <div class="capa sucia" id="capaA"></div>
+      <span class="etiqueta a">Antes</span>
+      <span class="etiqueta d">Después</span>
+      <div class="mango" id="mango"></div>
+      <span class="demo-sello">Demo · aquí van tus fotos reales</span>
+    </div>
+    <p class="pata"><span><b>Arrastra la línea:</b> así trabajamos, de arriba a abajo.</span><span>Interior · Exterior · Rines</span></p>
+  </div>
+</header>
+
+<div class="cinta">
+  <div class="env cinta-in">
+    <span class="hecho"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8E62E" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Agua y luz propias</b> — no dependemos de ti</span></span>
+    <span class="hecho"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8E62E" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Cita confirmada</b> — llegamos en la franja acordada</span></span>
+    <span class="hecho"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8E62E" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Inspección contigo</b> — caminamos el carro al entregar</span></span>
+  </div>
+</div>
+
+<section class="env sec" id="paquetes">
+  <h2 class="sec-t">Paquetes</h2>
+  <p class="sec-s">Tres niveles, un mismo estándar: cada rine cepillado, cada costura limpiada. Escoge por el estado del carro, no por el precio.</p>
+  <div class="paks">
+    <div class="pak">
+      <h3>Mantenimiento</h3>
+      <div class="precio">Desde $70<small>/carro</small></div>
+      <ul>
+        <li>Lavado a presión con espuma</li>
+        <li>Llantas y rines desengrasados</li>
+        <li>Secado con microfibra</li>
+        <li>Brillito de llantas</li>
+        <li>Aspirado interior</li>
+      </ul>
+      <a class="btn btn-linea" aria-label="Reservar paquete Mantenimiento" href="https://wa.me/1787XXXXXXX?text=Quiero%20el%20Mantenimiento" target="_blank" rel="noopener">Reservar este</a>
+    </div>
+    <div class="pak top">
+      <span class="tag">El más completo</span>
+      <h3>Detalle Completo</h3>
+      <div class="precio">Desde $150<small>/carro</small></div>
+      <ul>
+        <li>Todo lo del Mantenimiento</li>
+        <li>Interior completo: plásticos, tapiz, techuelo</li>
+        <li>Descontaminación de pintura (clay bar)</li>
+        <li>Sellado de cera líquida</li>
+      </ul>
+      <a class="btn btn-nitro" aria-label="Reservar paquete Detalle Completo" href="https://wa.me/1787XXXXXXX?text=Quiero%20el%20Detalle%20Completo" target="_blank" rel="noopener">Reservar este</a>
+    </div>
+    <div class="pak">
+      <h3>Sellado Cerámico</h3>
+      <div class="precio">Desde $250<small>/carro</small></div>
+      <ul>
+        <li>Todo lo del Detalle Completo</li>
+        <li>Descontaminación profunda de pintura (clay bar)</li>
+        <li>Preparación de superficie paso a paso</li>
+        <li>Aplicación de recubrimiento cerámico</li>
+        <li>Brillo sellado y lavadas más fáciles por meses</li>
+      </ul>
+      <a class="btn btn-linea" aria-label="Pedir cotización del Sellado Cerámico" href="https://wa.me/1787XXXXXXX?text=Quiero%20informacion%20del%20Ceramico" target="_blank" rel="noopener">Pedir cotización</a>
+    </div>
+  </div>
+  <p class="aviso-precio">Precios finales dependen del tamaño del vehículo y su estado. Te cotizamos firme por WhatsApp con dos fotos, sin compromiso.</p>
+</section>
+
+<section class="env sec" id="como" style="padding-top:0">
+  <h2 class="sec-t">Cómo funciona</h2>
+  <p class="sec-s">Sin dejar el carro en ningún lado y sin esperar todo el día en una sala.</p>
+  <div class="pasos">
+    <div class="paso"><h3>Reservas por WhatsApp</h3><p>Mándanos dos fotos del carro y escoge el día. Te confirmamos hora y precio firme antes de movernos.</p></div>
+    <div class="paso"><h3>Vamos a donde está</h3><p>Casa, trabajo o estacionamiento. Llevamos agua, corriente y todo lo necesario. Solo necesitamos que el carro esté accesible.</p></div>
+    <div class="paso"><h3>Entrega caminada</h3><p>Al terminar damos la vuelta al carro contigo: ves lo que se hizo y lo que conviene a futuro. Sin letra pequeña.</p></div>
+  </div>
+</section>
+
+<section class="env sec" id="zona" style="padding-top:0">
+  <h2 class="sec-t">Cobertura</h2>
+  <p class="sec-s">Área metro y alrededores. Si tu pueblo no aparece, pregúntanos igual: a veces podemos coordinar.</p>
+  <div class="zona">
+    <!-- ZONA: ajustar los pueblos que Roberto defina -->
+    <span class="chip">Bayamón</span><span class="chip">Guaynabo</span><span class="chip">San Juan</span><span class="chip">Carolina</span><span class="chip">Toa Baja</span><span class="chip">Cataño</span><span class="chip">Trujillo Alto</span>
+  </div>
+  <p class="requisito"><b>Condominios y estacionamientos públicos:</b> si el complejo exige permiso o hay reglamento de lavados, dínoslo al reservar y lo coordinamos contigo para no meterte en líos con la administración.</p>
+</section>
+
+<section class="env sec" style="padding-top:0">
+  <h2 class="sec-t">Preguntas frecuentes</h2>
+  <div class="faq">
+    <details><summary>¿Usan mi agua o mi luz?</summary><p>No. Llevamos tanque de agua y generador propios. Lo único que pedimos es espacio para trabajar alrededor del carro.</p></details>
+    <details><summary>¿Cuánto tarda cada servicio?</summary><p>Mantenimiento entre 1 y 2 horas. Detalle Completo de 3 a 5 horas. Cerámico puede ser día completo según la corrección que necesite la pintura.</p></details>
+    <details><summary>¿Qué pasa si llueve?</summary><p>Tu cita no se pierde: tenemos toldo para trabajo ligero y si el tiempo no da, reagendamos para el primer espacio libre sin costo.</p></details>
+    <details><summary>¿Hacen corrección de pintura?</summary><p>Todavía no ofrecemos corrección con máquina. Nuestro foco es limpieza profunda, protección cerámica y mantenimiento. Si tu carro necesita corrección de pintura te lo decimos claro y te orientamos con las mejores opciones, sin venderte algo que no necesitas.</p></details>
+    <details><summary>¿Cómo pago?</summary><p>Efectivo, ATH Móvil y tarjeta al terminar, cuando hayas inspeccionado el carro.</p></details>
+  </div>
+</section>
+
+<section class="env sec" id="contacto" style="padding-top:0">
+  <div class="contacto">
+    <div>
+      <h2>Revive tu carro esta semana</h2>
+      <p>Mándanos dos fotos por WhatsApp, te cotizamos firme y escogemos el día. Sin compromiso y sin formulario largo.</p>
+    </div>
+    <a class="btn btn-nitro" style="font-size:23px;padding:16px 30px" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20cotizar%20un%20detalle" target="_blank" rel="noopener">Abrir WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="env foot-in">
+    <span>NITRO WASH · Mobile Detailing · Bayamón, Puerto Rico</span>
+    <span>© <span id="anio">2026</span> Nitro Wash PR</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('anio').textContent=new Date().getFullYear();
+
+// Comparador antes/despues: puntero + teclado, sin listeners de scroll.
+(function(){
+  var caja=document.getElementById('compara'),mango=document.getElementById('mango'),capa=document.getElementById('capaA');
+  function set(pct){
+    pct=Math.max(4,Math.min(96,pct));
+    mango.style.left=pct+'%';
+    capa.style.clipPath='inset(0 '+(100-pct)+'% 0 0)';
+    caja.setAttribute('aria-valuenow',Math.round(pct));
+  }
+  set(50);
+  caja.setAttribute('aria-valuemin','0');
+  caja.setAttribute('aria-valuemax','100');
+  caja.setAttribute('aria-orientation','horizontal');
+  function desdeEvento(e){
+    var r=caja.getBoundingClientRect();
+    set(((e.clientX-r.left)/r.width)*100);
+  }
+  caja.addEventListener('pointerdown',function(e){
+    caja.setPointerCapture(e.pointerId);desdeEvento(e);
+    function mover(ev){desdeEvento(ev);}
+    function soltar(){caja.removeEventListener('pointermove',mover);caja.removeEventListener('pointerup',soltar);caja.removeEventListener('pointercancel',soltar);}
+    caja.addEventListener('pointermove',mover);
+    caja.addEventListener('pointerup',soltar);
+    caja.addEventListener('pointercancel',soltar);
+  });
+  caja.setAttribute('tabindex','0');
+  caja.setAttribute('role','slider');
+  caja.setAttribute('aria-label','Comparar antes y despues');
+  caja.addEventListener('keydown',function(e){
+    var actual=parseFloat(mango.style.left)||50;
+    if(e.key==='ArrowLeft'){set(actual-6);e.preventDefault();}
+    if(e.key==='ArrowRight'){set(actual+6);e.preventDefault();}
+  });
+})();
+</script>
+</body>
+</html>
