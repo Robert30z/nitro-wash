@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nitrowashpr.com/sitemap.xml
+Sitemap: https://robert30z.github.io/nitro-wash/sitemap.xml

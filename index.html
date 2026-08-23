@@ -5,20 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nitro Wash | Mobile Detailing en Puerto Rico</title>
 <meta name="description" content="Detailing profesional donde esté tu carro: casa, trabajo o condominio. Lavado, pulido, sellado y cerámico. Reserva por WhatsApp.">
-<link rel="canonical" href="https://nitrowashpr.com/">
+<link rel="canonical" href="https://robert30z.github.io/nitro-wash/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230D0F12'/><text x='50' y='70' font-family='Arial Black,Arial,sans-serif' font-size='58' font-weight='900' font-style='italic' fill='%23FF6B1A' text-anchor='middle'>N</text></svg>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nitro Wash | Mobile Detailing en Puerto Rico">
 <meta property="og:description" content="El detalle completo llega a tu driveway. Reserva por WhatsApp.">
-<meta property="og:image" content="https://nitrowashpr.com/og.png">
-<meta property="og:url" content="https://nitrowashpr.com/">
+<meta property="og:image" content="https://robert30z.github.io/nitro-wash/og.png">
+<meta property="og:url" content="https://robert30z.github.io/nitro-wash/">
 <meta property="og:site_name" content="Nitro Wash">
 <meta property="og:locale" content="es_PR">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Nitro Wash, mobile detailing en Puerto Rico">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nitrowashpr.com/og.png">
+<meta name="twitter:image" content="https://robert30z.github.io/nitro-wash/og.png">
+<!-- QUITAR ESTA LINEA cuando entre el numero de WhatsApp real. Mientras
+     este aqui, Google no indexa la pagina. -->
+<meta name="robots" content="noindex,follow">
 <meta name="theme-color" content="#0D0F12">
 <style>
 @font-face{font-family:'Barlow Condensed';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
@@ -133,6 +136,8 @@ h1 .wash{color:var(--hielo)}
 .precio small{font-size:16px;color:var(--mut);font-weight:600;letter-spacing:.06em}
 .pak ul{list-style:none;display:flex;flex-direction:column;gap:7px;font-size:15px;color:var(--mut);flex:1}
 .pak li{display:flex;gap:8px;align-items:flex-start}
+.pak-meta{font-size:13.5px;color:var(--mut);margin-top:-4px}
+.pak-para{font-size:15px;color:var(--tinta);min-height:3em}
 .pak li::before{content:'✓';color:var(--volt);font-weight:700;flex:none}
 .pak .btn{margin-top:6px}
 .aviso-precio{margin-top:14px;font-size:13px;color:var(--mut)}
@@ -198,7 +203,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   "name": "Nitro Wash",
   "alternateName": "Nitro Wash Mobile Detailing",
   "description": "Mobile detailing en Puerto Rico: lavado con espuma, limpieza profunda de interior, descontaminacion de pintura, sellado con cera liquida y sellado ceramico. El servicio llega a tu casa, trabajo o condominio.",
-  "url": "https://nitrowashpr.com/",
+  "url": "https://robert30z.github.io/nitro-wash/",
   "priceRange": "$70-$250",
   "areaServed": [
     { "@type": "City", "name": "Bayamon" },
@@ -210,9 +215,9 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
     { "@type": "City", "name": "Trujillo Alto" }
   ],
   "makesOffer": [
-    { "@type": "Offer", "name": "Mantenimiento", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 70, "priceCurrency": "USD" } },
-    { "@type": "Offer", "name": "Detalle Completo", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 150, "priceCurrency": "USD" } },
-    { "@type": "Offer", "name": "Sellado Ceramico", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 250, "priceCurrency": "USD" } }
+    { "@type": "Offer", "name": "Al día (lavado y aspirado)", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 70, "priceCurrency": "USD" } },
+    { "@type": "Offer", "name": "A fondo (detalle completo)", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 150, "priceCurrency": "USD" } },
+    { "@type": "Offer", "name": "Blindado (sellado cerámico)", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 250, "priceCurrency": "USD" } }
   ]
 }
 </script>
@@ -276,42 +281,48 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
 
 <section class="env sec" id="paquetes">
   <h2 class="sec-t">Paquetes</h2>
-  <p class="sec-s">Tres niveles, un mismo estándar: cada rine cepillado, cada costura limpiada. Escoge por el estado del carro, no por el precio.</p>
+  <p class="sec-s">Tres niveles, un mismo estándar: cada rine cepillado, cada costura limpiada. Escoge por como esté tu carro hoy, no por el precio.</p>
   <div class="paks">
     <div class="pak">
-      <h3>Mantenimiento</h3>
+      <h3>Al día</h3>
       <div class="precio">Desde $70<small>/carro</small></div>
+      <p class="pak-meta">Lavado y aspirado · 1 a 2 horas</p>
+      <p class="pak-para">Para el carro que se cuida seguido y solo hay que ponerlo al día.</p>
       <ul>
-        <li>Lavado a presión con espuma</li>
-        <li>Llantas y rines desengrasados</li>
-        <li>Secado con microfibra</li>
-        <li>Brillito de llantas</li>
-        <li>Aspirado interior</li>
+        <li>Lavado con espuma y guante, a mano</li>
+        <li>Rines y gomas cepillados uno por uno</li>
+        <li>Secado con microfibra, sin marcas de agua</li>
+        <li>Aspirado por dentro y cristales por los dos lados</li>
+        <li>Acabado de gomas</li>
       </ul>
-      <a class="btn btn-linea" aria-label="Reservar paquete Mantenimiento" href="https://wa.me/1787XXXXXXX?text=Quiero%20el%20Mantenimiento" target="_blank" rel="noopener">Reservar este</a>
+      <a class="btn btn-linea" aria-label="Reservar el paquete Al día por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20el%20paquete%20Al%20dia" target="_blank" rel="noopener">Reservar este</a>
     </div>
     <div class="pak top">
-      <span class="tag">El más completo</span>
-      <h3>Detalle Completo</h3>
+      <span class="tag">Recomendado</span>
+      <h3>A fondo</h3>
       <div class="precio">Desde $150<small>/carro</small></div>
+      <p class="pak-meta">Detalle completo · 3 a 5 horas</p>
+      <p class="pak-para">Para el carro que lleva tiempo sin un detalle de verdad, por dentro y por fuera.</p>
       <ul>
-        <li>Todo lo del Mantenimiento</li>
-        <li>Interior completo: plásticos, tapiz, techuelo</li>
-        <li>Descontaminación de pintura (clay bar)</li>
-        <li>Sellado de cera líquida</li>
+        <li>Todo lo de Al día</li>
+        <li>Interior completo: plásticos, tapiz, techuelo y consolas</li>
+        <li>La pintura queda lisa al tacto (clay bar)</li>
+        <li>Cera líquida: brillo parejo y protección para el sol de aquí</li>
       </ul>
-      <a class="btn btn-nitro" aria-label="Reservar paquete Detalle Completo" href="https://wa.me/1787XXXXXXX?text=Quiero%20el%20Detalle%20Completo" target="_blank" rel="noopener">Reservar este</a>
+      <a class="btn btn-nitro" aria-label="Reservar el paquete A fondo por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20el%20paquete%20A%20fondo" target="_blank" rel="noopener">Reservar este</a>
     </div>
     <div class="pak">
-      <h3>Sellado Cerámico</h3>
+      <h3>Blindado</h3>
       <div class="precio">Desde $250<small>/carro</small></div>
+      <p class="pak-meta">Sellado cerámico · día completo</p>
+      <p class="pak-para">Para el que quiere que el trabajo aguante y que lavar el carro deje de ser un día entero.</p>
       <ul>
-        <li>Todo lo del Detalle Completo</li>
-        <li>Preparación de superficie paso a paso</li>
-        <li>Aplicación de recubrimiento cerámico</li>
-        <li>Brillo sellado y lavadas más fáciles por meses</li>
+        <li>Todo lo de A fondo</li>
+        <li>Pintura preparada paso a paso antes de sellar</li>
+        <li>Recubrimiento cerámico aplicado a mano</li>
+        <li>El sucio agarra menos y la próxima lavada toma la mitad</li>
       </ul>
-      <a class="btn btn-linea" aria-label="Pedir cotización del Sellado Cerámico" href="https://wa.me/1787XXXXXXX?text=Quiero%20informacion%20del%20Ceramico" target="_blank" rel="noopener">Pedir cotización</a>
+      <a class="btn btn-linea" aria-label="Pedir cotización del paquete Blindado por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20informacion%20del%20Blindado" target="_blank" rel="noopener">Pedir cotización</a>
     </div>
   </div>
   <p class="aviso-precio">Precios finales dependen del tamaño del vehículo y su estado. Te cotizamos firme por WhatsApp con dos fotos, sin compromiso.</p>
