@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NITRO WASH · Margen por trabajo (uso interno)</title>
+<style>
+@font-face{font-family:'BC';src:url('fuentes/bc-bold.ttf') format('truetype');font-weight:700}
+*{margin:0;box-sizing:border-box}
+body{background:#0D0F12;color:#F4F6F8;font-family:system-ui,sans-serif;font-size:16px;padding:24px}
+.env{max-width:760px;margin:0 auto}
+h1{font-family:'BC';font-weight:700;text-transform:uppercase;font-size:30px;margin-bottom:6px}
+.aviso{color:#A7B0BA;font-size:14px;margin-bottom:22px}
+.card{background:#151920;border:1px solid rgba(244,246,248,.12);border-radius:12px;padding:20px;margin-bottom:16px}
+.card h2{font-family:'BC';text-transform:uppercase;font-size:21px;margin-bottom:14px}
+.fila{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(244,246,248,.07)}
+.fila label{color:#A7B0BA;font-size:14.5px}
+.fila input{width:110px;background:#1B2028;color:#F4F6F8;border:1px solid rgba(244,246,248,.12);border-radius:8px;padding:8px 10px;font-size:15px;text-align:right}
+.total{font-family:'BC';font-weight:700;font-size:26px;color:#FF6B1A}
+.ganancia{font-family:'BC';font-weight:700;font-size:40px;line-height:1}
+.ok{color:#B8E62E}.tibio{color:#FFC24B}.malo{color:#FF5A4E}
+.por-hora{color:#A7B0BA;font-size:14px;margin-top:6px}
+select{background:#1B2028;color:#F4F6F8;border:1px solid rgba(244,246,248,.12);border-radius:8px;padding:10px 14px;font-size:15px}
+.nota{font-size:12.5px;color:#A7B0BA;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="env">
+  <h1>Margen por trabajo</h1>
+  <p class="aviso">Uso interno. Los costos de insumos son estimados editables: cuando compres productos, ajusta aqui con precios REALES. El margen miente hasta que los costos son verdad.</p>
+
+  <div class="card">
+    <h2>El trabajo</h2>
+    <div class="fila"><label>Paquete</label>
+      <select id="pak">
+        <option value="70" data-tiempo="1.5">Al dia · $70</option>
+        <option value="150" data-tiempo="4" selected>A fondo · $150</option>
+        <option value="250" data-tiempo="7">Blindado · $250</option>
+      </select>
+    </div>
+    <div class="fila"><label>Tiempo estimado (horas)</label><input id="tiempo" type="number" value="4" step="0.5"></div>
+  </div>
+
+  <div class="card">
+    <h2>Costos del trabajo (editables)</h2>
+    <div class="fila"><label>Shampoo / jabon</label><input class="costo" type="number" value="2" step="0.5"></div>
+    <div class="fila"><label>Cera o sellador</label><input class="costo" type="number" value="5" step="0.5"></div>
+    <div class="fila"><label>Ceramico (si aplica, prorrateado)</label><input class="costo" type="number" value="0" step="1"></div>
+    <div class="fila"><label>Microfibras / desgaste de consumibles</label><input class="costo" type="number" value="2" step="0.5"></div>
+    <div class="fila"><label>Gasolina del viaje (ida y vuelta)</label><input class="costo" type="number" value="7" step="0.5"></div>
+    <div class="fila"><label>Gasolina del generador</label><input class="costo" type="number" value="4" step="0.5"></div>
+    <div class="fila"><label>Agua / otros</label><input class="costo" type="number" value="1" step="0.5"></div>
+  </div>
+
+  <div class="card">
+    <h2>El veredicto</h2>
+    <div class="fila"><label>Precio cobrado</label><span class="total" id="precio">$150</span></div>
+    <div class="fila"><label>Costo total del trabajo</label><span class="total" id="costo" style="color:#A7B0BA">$21</span></div>
+    <div style="margin-top:14px">
+      <div class="ganancia" id="ganancia">$129</div>
+      <div class="por-hora" id="porHora">$32.25 por hora real</div>
+    </div>
+    <p class="nota">Referencia: si el $/hora real baja de $25, el trabajo no paga el desgaste del equipo ni tu espalda. Sube el precio o recorta tiempo.</p>
+  </div>
+</div>
+
+<script>
+var pakEl=document.getElementById('pak'),tiempoEl=document.getElementById('tiempo');
+function calc(){
+  var precio=parseInt(pakEl.value,10);
+  document.getElementById('precio').textContent='$'+precio;
+  var costo=0;
+  document.querySelectorAll('.costo').forEach(function(i){costo+=parseFloat(i.value)||0;});
+  document.getElementById('costo').textContent='$'+Math.round(costo);
+  var g=precio-costo;
+  var gEl=document.getElementById('ganancia');
+  gEl.textContent='$'+Math.round(g);
+  gEl.className='ganancia '+(g>=100?'ok':(g>=60?'tibio':'malo'));
+  var h=parseFloat(tiempoEl.value)||1;
+  document.getElementById('porHora').textContent='$'+(g/h).toFixed(2)+' por hora real';
+}
+[pakEl,tiempoEl].forEach(function(el){el.addEventListener('change',function(){
+  if(el===pakEl)tiempoEl.value=pakEl.selectedOptions[0].dataset.tiempo;
+  calc();
+});});
+document.querySelectorAll('.costo').forEach(function(i){i.addEventListener('input',calc);});
+calc();
+</script>
+</body>
+</html>
