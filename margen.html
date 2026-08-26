@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NITRO WASH · Margen por trabajo (uso interno)</title>
 <style>
-@font-face{font-family:'BC';src:url('fuentes/bc-bold.ttf') format('truetype');font-weight:700}
+@font-face{font-family:'BC';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700}
 *{margin:0;box-sizing:border-box}
 body{background:#0D0F12;color:#F4F6F8;font-family:system-ui,sans-serif;font-size:16px;padding:24px}
 .env{max-width:760px;margin:0 auto}
@@ -38,7 +38,7 @@ select{background:#1B2028;color:#F4F6F8;border:1px solid rgba(244,246,248,.12);b
         <option value="250" data-tiempo="7">Blindado · $250</option>
       </select>
     </div>
-    <div class="fila"><label>Tiempo estimado (horas)</label><input id="tiempo" type="number" value="4" step="0.5"></div>
+    <div class="fila"><label>Tiempo estimado (horas)</label><input id="tiempo" type="number" value="4" step="0.5" min="0.5"></div>
   </div>
 
   <div class="card">
@@ -60,29 +60,56 @@ select{background:#1B2028;color:#F4F6F8;border:1px solid rgba(244,246,248,.12);b
       <div class="ganancia" id="ganancia">$129</div>
       <div class="por-hora" id="porHora">$32.25 por hora real</div>
     </div>
-    <p class="nota">Referencia: si el $/hora real baja de $25, el trabajo no paga el desgaste del equipo ni tu espalda. Sube el precio o recorta tiempo.</p>
+    <p class="nota">El semaforo mira <b>$/hora</b>, no la ganancia total: un trabajo de $70 que dura hora y media deja mas por hora que uno de $250 que te come el dia.<br><span class="ok">Verde</span> desde $40/hora &middot; <span class="tibio">Amarillo</span> entre $25 y $40 &middot; <span class="malo">Rojo</span> bajo $25/hora, que no paga el desgaste del equipo ni tu espalda. Ahi se sube el precio o se recorta tiempo.</p>
   </div>
 </div>
 
 <script>
 var pakEl=document.getElementById('pak'),tiempoEl=document.getElementById('tiempo');
+
+// Un solo criterio, y es el que esta escrito en pantalla: $/HORA.
+// Antes el semaforo usaba ganancia total ($100 verde), y con eso "Al dia" a $70
+// salia SIEMPRE en rojo aunque dejara $32.67 la hora, mas que "A fondo" a $150.
+var VERDE=40, AMARILLO=25;
+
+// Muestra centavos solo cuando los hay, para que precio - costo = ganancia
+// cuadre en pantalla. Antes se redondeaba costo y ganancia por separado y los
+// tres numeros de la tarjeta no daban.
+function fmt(x){ return '$' + (Number.isInteger(x) ? x : x.toFixed(2)); }
+
 function calc(){
   var precio=parseInt(pakEl.value,10);
-  document.getElementById('precio').textContent='$'+precio;
+  document.getElementById('precio').textContent=fmt(precio);
+
   var costo=0;
   document.querySelectorAll('.costo').forEach(function(i){costo+=parseFloat(i.value)||0;});
-  document.getElementById('costo').textContent='$'+Math.round(costo);
-  var g=precio-costo;
+  costo=Math.round(costo*100)/100;
+  document.getElementById('costo').textContent=fmt(costo);
+
+  var g=Math.round((precio-costo)*100)/100;
   var gEl=document.getElementById('ganancia');
-  gEl.textContent='$'+Math.round(g);
-  gEl.className='ganancia '+(g>=100?'ok':(g>=60?'tibio':'malo'));
-  var h=parseFloat(tiempoEl.value)||1;
-  document.getElementById('porHora').textContent='$'+(g/h).toFixed(2)+' por hora real';
+  gEl.textContent=fmt(g);
+
+  var h=parseFloat(tiempoEl.value);
+  var phEl=document.getElementById('porHora');
+
+  if(!(h>0)){
+    // 0 horas o vacio no se convierte en 1 en silencio: se dice.
+    phEl.textContent='Pon las horas para saber el $/hora real';
+    gEl.className='ganancia';
+    return;
+  }
+
+  var ph=g/h;
+  phEl.textContent='$'+ph.toFixed(2)+' por hora real';
+  gEl.className='ganancia '+(ph>=VERDE?'ok':(ph>=AMARILLO?'tibio':'malo'));
 }
+
 [pakEl,tiempoEl].forEach(function(el){el.addEventListener('change',function(){
   if(el===pakEl)tiempoEl.value=pakEl.selectedOptions[0].dataset.tiempo;
   calc();
 });});
+tiempoEl.addEventListener('input',calc);
 document.querySelectorAll('.costo').forEach(function(i){i.addEventListener('input',calc);});
 calc();
 </script>

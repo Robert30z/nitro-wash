@@ -1,8 +1,12 @@
-# NITRO WASH - Kit de WhatsApp Business
+# NITRO WASH - Kit de mensajes de texto
 
-> Los textos del NEGOCIO para SUS clientes. Montaje: WhatsApp Business EN EL TELEFONO >
-> Configuracion > Herramientas de empresa. La bienvenida y la ausencia NO existen en
-> WhatsApp Web: solo en el telefono (verificado en el kit de Pit Stop).
+> Los textos del NEGOCIO para SUS clientes, por SMS al (787) 547-9549.
+>
+> 26-ago-2026: esto era un kit de WhatsApp Business. Se cambio a SMS porque el
+> numero es el PERSONAL de Roberto y en WhatsApp el cliente le veria su foto de
+> perfil. El SMS no tiene respuestas automaticas ni atajos: estos textos se
+> guardan como Reemplazo de texto del telefono (iPhone: Ajustes > General >
+> Teclado > Reemplazo de texto) y se disparan escribiendo el atajo.
 > Reglas: ningun plazo concreto de respuesta, ninguna promesa que no dependa de uno,
 > cero emojis dentro de cotizaciones.
 
@@ -31,7 +35,7 @@ Mientras tanto, si me deja el modelo del carro, su pueblo y el servicio
 que busca, ya tengo todo listo para cotizarle.
 ```
 
-## 3. Respuestas rapidas (atajos)
+## 3. Respuestas rapidas (atajos de Reemplazo de texto)
 
 | Atajo | Para |
 |---|---|
@@ -45,9 +49,9 @@ que busca, ya tengo todo listo para cotizarle.
 ```
 Tenemos tres niveles:
 
-Mantenimiento desde $70 - lavado con espuma, rines, aspirado.
-Detalle Completo desde $150 - + interior profundo, clay bar, cera liquida.
-Sellado Ceramico desde $250 - + descontaminacion profunda y ceramico.
+Al dia desde $70 - lavado con espuma, rines, aspirado.
+A fondo desde $150 - + interior profundo, clay bar, cera liquida.
+Blindado desde $250 - + descontaminacion profunda y ceramico.
 
 El precio firme depende del tamano del carro y su estado.
 Mandame dos fotos (una de frente y una del interior) y el pueblo,
@@ -67,7 +71,8 @@ Te confirmo por aqui y listo. No hay deposito.
 
 ### /zona
 ```
-Cubrimos [PUEBLOS - POR DEFINIR].
+Cubrimos Bayamon, Guaynabo, San Juan, Carolina, Toa Baja, Catano
+y Trujillo Alto.
 
 Si tu pueblo no aparece, mandalo igual: a veces se puede coordinar.
 ```
@@ -86,11 +91,13 @@ el tiempo no da, te reagendamos para el primer espacio libre sin costo.
 
 ## 4. Checklist de montaje (en el telefono, con Roberto)
 
-- [ ] Perfil: nombre NITRO WASH, foto = el logo, descripcion corta
-- [ ] Descripcion de empresa: "Mobile detailing en Puerto Rico. Lavado, interior,
-      sellado y ceramico donde este tu carro. Cotizacion por WhatsApp con dos fotos."
-- [ ] Bienvenida activada (Enviar a todos)
-- [ ] Ausencia programada segun SU horario real
-- [ ] Las 5 respuestas rapidas con sus atajos
-- [ ] Catalogo opcional: los 3 paquetes con precio "desde"
-- [ ] Link corto de WhatsApp para la pagina: wa.me/1XXXXXXXXXX con texto precargado
+- [ ] Guardar los 5 atajos en Reemplazo de texto (/precio, /cita, /zona, /pago, /lluvia)
+- [ ] La bienvenida y la ausencia se mandan a mano: el SMS no las automatiza
+- [ ] Probar que los 5 QR abren Mensajes con el texto ya escrito (ANTES de imprimir)
+
+## 5. Si algun dia quiere WhatsApp Business
+
+WhatsApp Business SI ensena el nombre y el logo del negocio en vez de la foto
+personal, que era la objecion. El problema es otro: convertiria su WhatsApp
+personal en el del negocio, en el mismo numero. La salida limpia es un segundo
+numero (una eSIM prepago sirve). Mientras tanto, SMS.

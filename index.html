@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nitro Wash | Mobile Detailing en Puerto Rico</title>
-<meta name="description" content="Detailing profesional donde esté tu carro: casa, trabajo o condominio. Lavado, interior, sellado y cerámico. Reserva por WhatsApp.">
+<meta name="description" content="Detailing profesional donde esté tu carro: casa, trabajo o condominio. Lavado, interior, sellado y cerámico. Reserva por mensaje de texto.">
 <link rel="canonical" href="https://robert30z.github.io/nitro-wash/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230D0F12'/><text x='50' y='70' font-family='Arial Black,Arial,sans-serif' font-size='58' font-weight='900' font-style='italic' fill='%23FF6B1A' text-anchor='middle'>N</text></svg>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nitro Wash | Mobile Detailing en Puerto Rico">
-<meta property="og:description" content="El detalle completo llega a tu driveway. Reserva por WhatsApp.">
+<meta property="og:description" content="El detalle completo llega a tu driveway. Reserva por mensaje de texto.">
 <meta property="og:image" content="https://robert30z.github.io/nitro-wash/og.png">
 <meta property="og:url" content="https://robert30z.github.io/nitro-wash/">
 <meta property="og:site_name" content="Nitro Wash">
@@ -19,9 +19,6 @@
 <meta property="og:image:alt" content="Nitro Wash, mobile detailing en Puerto Rico">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://robert30z.github.io/nitro-wash/og.png">
-<!-- QUITAR ESTA LINEA cuando entre el numero de WhatsApp real. Mientras
-     este aqui, Google no indexa la pagina. -->
-<meta name="robots" content="noindex,follow">
 <meta name="theme-color" content="#0D0F12">
 <style>
 @font-face{font-family:'Barlow Condensed';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
@@ -148,10 +145,10 @@ h1 .wash{color:var(--hielo)}
 .cot-grupo{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
 .cot-l{font-family:'Barlow Condensed';font-weight:600;font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);min-width:86px}
 .pills{display:flex;gap:8px;flex-wrap:wrap}
-.pill{font-family:'Barlow Condensed';font-weight:600;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--mut);background:transparent;border:1px solid var(--linea);border-radius:99px;padding:9px 18px;cursor:pointer;transition:border-color .15s,color .15s}
+.pill{font-family:'Barlow Condensed';font-weight:600;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--mut);background:transparent;border:1px solid var(--linea);border-radius:99px;padding:9px 18px;min-height:44px;display:inline-flex;align-items:center;cursor:pointer;transition:border-color .15s,color .15s}
 .pill:hover{border-color:var(--mut);color:var(--tinta)}
 .pill.on{border-color:var(--nitro);color:var(--nitro);box-shadow:0 0 0 1px var(--nitro) inset}
-.cot-grupo select{background:var(--panel-2);color:var(--tinta);border:1px solid var(--linea);border-radius:var(--r);padding:10px 14px;font-family:'Barlow',sans-serif;font-size:15px}
+.cot-grupo select{background:var(--panel-2);color:var(--tinta);border:1px solid var(--linea);border-radius:var(--r);padding:10px 14px;min-height:44px;font-family:'Barlow',sans-serif;font-size:15px}
 .cot-resultado{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--linea);padding-top:18px;margin-top:6px}
 .cot-precio{font-family:'Barlow Condensed';font-weight:700;font-size:44px;color:var(--nitro);line-height:1}
 .cot-nota{display:block;font-size:12.5px;color:var(--mut);margin-top:4px}
@@ -183,6 +180,8 @@ details p{padding:0 18px 16px;color:var(--mut);font-size:15px}
 .contacto{background:var(--panel);border:1px solid var(--linea);border-radius:14px;padding:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center}
 .contacto h2{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,4vw,38px);text-transform:uppercase;line-height:1.05}
 .contacto p{color:var(--mut);margin-top:8px;max-width:52ch}
+.tel-visible{font-family:'Barlow Condensed';font-weight:600;font-size:21px;letter-spacing:.02em}
+.tel-visible a{color:var(--nitro);text-decoration:none;border-bottom:1px solid var(--nitro);display:inline-flex;align-items:center;min-height:44px}
 footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-size:13.5px;color:var(--mut)}
 .foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
@@ -216,6 +215,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   "@context": "https://schema.org",
   "@type": "AutoWash",
   "name": "Nitro Wash",
+  "telephone": "+17875479549",
   "alternateName": "Nitro Wash Mobile Detailing",
   "description": "Mobile detailing en Puerto Rico: lavado con espuma, limpieza profunda de interior, descontaminacion de pintura, sellado con cera liquida y sellado ceramico. El servicio llega a tu casa, trabajo o condominio.",
   "url": "https://robert30z.github.io/nitro-wash/",
@@ -252,7 +252,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
       <a href="#paquetes">Paquetes</a>
       <a href="#como">Cómo funciona</a>
       <a href="#zona">Cobertura</a>
-      <a class="btn btn-nitro" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20detalle" target="_blank" rel="noopener">Reservar</a>
+      <a class="btn btn-nitro" href="sms:+17875479549?&body=Hola%2C%20quiero%20reservar%20un%20detalle">Reservar</a>
     </div>
   </div>
 </nav>
@@ -263,9 +263,9 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   <div>
     <span class="kicker">Mobile detailing · Puerto Rico</span>
     <h1>Tu carro sale <span class="wash">brillando</span> sin moverte de tu casa.</h1>
-    <p class="sub">Lavado, interior y sellado profesional donde esté tu carro: casa, trabajo o condominio. Tú reservas por WhatsApp, nosotros llegamos.</p>
+    <p class="sub">Lavado, interior y sellado profesional donde esté tu carro: casa, trabajo o condominio. Tú reservas por mensaje de texto, nosotros llegamos.</p>
     <div class="hero-ctas">
-      <a class="btn btn-nitro" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20detalle" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+      <a class="btn btn-nitro" href="sms:+17875479549?&body=Hola%2C%20quiero%20reservar%20un%20detalle">Reserva por mensaje</a>
       <a class="btn btn-linea" href="#paquetes">Ver paquetes</a>
     </div>
     <p class="nota-hero">Llevamos nuestra propia agua y corriente. <b>No te pedimos nada.</b></p>
@@ -310,7 +310,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
         <li>Aspirado por dentro y cristales por los dos lados</li>
         <li>Acabado de gomas</li>
       </ul>
-      <a class="btn btn-linea" aria-label="Reservar el paquete Al día por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20el%20paquete%20Al%20dia" target="_blank" rel="noopener">Reservar este</a>
+      <a class="btn btn-linea" aria-label="Reservar el paquete Al día por mensaje de texto" href="sms:+17875479549?&body=Saludos%2C%20quiero%20el%20paquete%20Al%20dia">Reservar este</a>
     </div>
     <div class="pak top">
       <span class="tag">Recomendado</span>
@@ -324,7 +324,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
         <li>La pintura queda lisa al tacto (clay bar)</li>
         <li>Cera líquida: brillo parejo y protección para el sol de aquí</li>
       </ul>
-      <a class="btn btn-nitro" aria-label="Reservar el paquete A fondo por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20el%20paquete%20A%20fondo" target="_blank" rel="noopener">Reservar este</a>
+      <a class="btn btn-nitro" aria-label="Reservar el paquete A fondo por mensaje de texto" href="sms:+17875479549?&body=Saludos%2C%20quiero%20el%20paquete%20A%20fondo">Reservar este</a>
     </div>
     <div class="pak">
       <h3>Blindado</h3>
@@ -337,10 +337,10 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
         <li>Recubrimiento cerámico aplicado a mano</li>
         <li>El sucio agarra menos y la próxima lavada toma la mitad</li>
       </ul>
-      <a class="btn btn-linea" aria-label="Pedir cotización del paquete Blindado por WhatsApp" href="https://wa.me/1787XXXXXXX?text=Saludos%2C%20quiero%20informacion%20del%20Blindado" target="_blank" rel="noopener">Pedir cotización</a>
+      <a class="btn btn-linea" aria-label="Pedir cotización del paquete Blindado por mensaje de texto" href="sms:+17875479549?&body=Saludos%2C%20quiero%20informacion%20del%20Blindado">Pedir cotización</a>
     </div>
   </div>
-  <p class="aviso-precio">Precios finales dependen del tamaño del vehículo y su estado. Te cotizamos firme por WhatsApp con dos fotos, sin compromiso.</p>
+  <p class="aviso-precio">Precios finales dependen del tamaño del vehículo y su estado. Te cotizamos firme por mensaje con dos fotos, sin compromiso.</p>
 
   <div class="cotizador" id="cotizar">
     <h3 class="cot-t">Cotiza en 10 segundos</h3>
@@ -355,9 +355,9 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
     <div class="cot-grupo">
       <span class="cot-l">Paquete</span>
       <div class="pills" id="pills-pak" role="group" aria-label="Paquete">
-        <button type="button" class="pill" aria-pressed="false" data-p="Mantenimiento" data-base="70">Mantenimiento</button>
-        <button type="button" class="pill on" aria-pressed="true" data-p="Detalle Completo" data-base="150">Detalle Completo</button>
-        <button type="button" class="pill" aria-pressed="false" data-p="Sellado Cerámico" data-base="250">Sellado Cerámico</button>
+        <button type="button" class="pill" aria-pressed="false" data-p="Al día" data-base="70">Al día</button>
+        <button type="button" class="pill on" aria-pressed="true" data-p="A fondo" data-base="150">A fondo</button>
+        <button type="button" class="pill" aria-pressed="false" data-p="Blindado" data-base="250">Blindado</button>
       </div>
     </div>
     <div class="cot-grupo">
@@ -373,9 +373,9 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
         <span class="cot-precio" id="cot-precio">Desde $150</span>
         <span class="cot-nota">precio de referencia para tu carro</span>
       </div>
-      <a class="btn btn-nitro" id="cot-wa" href="#" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      <a class="btn btn-nitro" id="cot-wa" href="sms:+17875479549?&body=Hola%20NITRO%20WASH%2C%20quiero%20el%20paquete%20A%20fondo%20para%20un%20Sed%C3%A1n%20en%20Bayam%C3%B3n.%20Me%20confirmas%20precio%20y%20dia%3F">Reservar por mensaje</a>
     </div>
-    <p class="cot-aviso">El precio firme te lo confirmo por WhatsApp con dos fotos del carro, segun su estado real.</p>
+    <p class="cot-aviso">El precio firme te lo confirmo por mensaje con dos fotos del carro, segun su estado real.</p>
   </div>
 </section>
 
@@ -383,7 +383,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   <h2 class="sec-t">Cómo funciona</h2>
   <p class="sec-s">Sin dejar el carro en ningún lado y sin esperar todo el día en una sala.</p>
   <div class="pasos">
-    <div class="paso"><h3>Reservas por WhatsApp</h3><p>Mándanos dos fotos del carro y escoge el día. Te confirmamos hora y precio firme antes de movernos.</p></div>
+    <div class="paso"><h3>Reservas por mensaje</h3><p>Mándanos dos fotos del carro y escoge el día. Te confirmamos hora y precio firme antes de movernos.</p></div>
     <div class="paso"><h3>Vamos a donde está</h3><p>Casa, trabajo o estacionamiento. Llevamos agua, corriente y todo lo necesario. Solo necesitamos que el carro esté accesible.</p></div>
     <div class="paso"><h3>Entrega caminada</h3><p>Al terminar damos la vuelta al carro contigo: ves lo que se hizo y lo que conviene a futuro.</p></div>
   </div>
@@ -414,9 +414,10 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   <div class="contacto">
     <div>
       <h2>Revive tu carro esta semana</h2>
-      <p>Mándanos dos fotos por WhatsApp, te cotizamos firme y escogemos el día. Sin compromiso y sin formulario largo.</p>
+      <p>Mándanos dos fotos por mensaje de texto, te cotizamos firme y escogemos el día. Sin compromiso y sin formulario largo.</p>
+      <p class="tel-visible">Escríbenos al <a href="tel:+17875479549">(787) 547-9549</a></p>
     </div>
-    <a class="btn btn-nitro btn-xl" href="https://wa.me/1787XXXXXXX?text=Hola%2C%20quiero%20cotizar%20un%20detalle" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <a class="btn btn-nitro btn-xl" href="sms:+17875479549?&body=Hola%2C%20quiero%20cotizar%20un%20detalle">Mandar mensaje</a>
   </div>
 </section>
 
@@ -432,7 +433,7 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
 <script>
 document.getElementById('anio').textContent=new Date().getFullYear();
 
-// Cotizador: precio de referencia por tamano + paquete, mensaje de WhatsApp armado.
+// Cotizador: precio de referencia por tamano + paquete, mensaje de texto armado.
 // El estado inicial se LEE del DOM (la pill .on de cada grupo): una sola fuente de verdad.
 (function(){
   var precio=document.getElementById('cot-precio'),wa=document.getElementById('cot-wa'),pueblo=document.getElementById('cot-pueblo');
@@ -451,10 +452,10 @@ document.getElementById('anio').textContent=new Date().getFullYear();
   function pintar(){
     var total=pak.base+carro.mult;
     precio.textContent='Desde $'+total;
-    var msg='Hola NITRO WASH, quiero el '+pak.p+' para un '+carro.v;
+    var msg='Hola NITRO WASH, quiero el paquete '+pak.p+' para un '+carro.v;
     if(pueblo.value)msg+=' en '+pueblo.value;
     msg+='. Me confirmas precio y dia?';
-    wa.href='https://wa.me/1787XXXXXXX?text='+encodeURIComponent(msg);
+    wa.href='sms:+17875479549?&body='+encodeURIComponent(msg);
   }
   grupo('pills-carro',function(b){carro={v:b.dataset.v,mult:parseInt(b.dataset.mult,10)};});
   grupo('pills-pak',function(b){pak={p:b.dataset.p,base:parseInt(b.dataset.base,10)};});

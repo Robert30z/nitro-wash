@@ -51,7 +51,7 @@ Si me da la oportunidad de hacer una unidad de prueba sin costo,
 vea el resultado y decidimos el resto.
 
 Quedo al pendiente 🏁
-Roberto Mendez · NITRO WASH · WhatsApp (787) XXX-XXXX
+Roberto Mendez · NITRO WASH · Texto al (787) 547-9549
 ```
 
 **La unidad de prueba gratis** es la jugada: un carro de muestra cuesta

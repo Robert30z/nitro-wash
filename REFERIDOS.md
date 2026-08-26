@@ -23,7 +23,7 @@ Dale este codigo a un amigo y los dos ganan:
         SU PRIMER DETALLE: $10 OFF
 
 Codigo: NW-___
-WhatsApp: (787) XXX-XXXX
+Texto al: (787) 547-9549
 ```
 
 ## El reverso
@@ -33,7 +33,7 @@ Lavado, interior profundo, sellado y ceramico.
 Vamos a tu casa, trabajo o condominio.
 Llevamos agua y corriente.
 
-nitrowashpr.com
+Texto al (787) 547-9549
 ```
 
 ## Reglas

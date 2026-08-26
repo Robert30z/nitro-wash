@@ -55,6 +55,8 @@ cliente con problemas. El tuyo y los tuyos son el material de lanzamiento.
 ## 3. Dominio y publicacion (~$12/al ano)
 
 - [ ] Comprar dominio en Porkbun (mismo registrador de outrankpr.com): nitrowashpr.com
+      NO ponerlo en nada impreso hasta que sea suyo. Se saco de la tarjeta
+      de referidos el 26-ago justo por eso.
 - [ ] Repo nuevo GitHub: nitro-wash (verificar que el nombre no choque:
       gh repo view Robert30z/nitro-wash ANTES de crear)
 - [ ] Subir index.html + fuentes/ + assets/logo.png
@@ -74,7 +76,10 @@ cliente con problemas. El tuyo y los tuyos son el material de lanzamiento.
 
 ## Pendientes bloqueantes de la pagina (de Roberto)
 
-1. Numero de WhatsApp real (6 enlaces dicen 1787XXXXXXX)
-2. Pueblos de cobertura reales (la pagina y /zona usan placeholders)
+1. ~~Numero real~~ HECHO 26-ago: (787) 547-9549, y la pagina va por SMS,
+   no por WhatsApp (es su numero personal y no quiere que el cliente vea
+   su foto de perfil).
+2. ~~Pueblos de cobertura~~ HECHO: Bayamon, Guaynabo, San Juan, Carolina,
+   Toa Baja, Catano y Trujillo Alto, en la pagina y en el schema.
 3. Archivo del logo .png (hay wordmark temporal)
 4. Producto ceramico que va a usar (para prometer duracion honesta)
