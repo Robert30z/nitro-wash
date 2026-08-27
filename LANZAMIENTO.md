@@ -79,7 +79,8 @@ cliente con problemas. El tuyo y los tuyos son el material de lanzamiento.
 1. ~~Numero real~~ HECHO 26-ago: (787) 547-9549, y la pagina va por SMS,
    no por WhatsApp (es su numero personal y no quiere que el cliente vea
    su foto de perfil).
-2. ~~Pueblos de cobertura~~ HECHO: Bayamon, Guaynabo, San Juan, Carolina,
-   Toa Baja, Catano y Trujillo Alto, en la pagina y en el schema.
+2. ~~Pueblos de cobertura~~ HECHO: Bayamon, Guaynabo, San Juan y Dorado, en
+   la pagina, en el schema y en Facebook. (27-ago: Roberto recorto la lista;
+   antes eran siete e incluia Carolina, Toa Baja, Catano y Trujillo Alto.)
 3. Archivo del logo .png (hay wordmark temporal)
 4. Producto ceramico que va a usar (para prometer duracion honesta)

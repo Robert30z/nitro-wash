@@ -62,7 +62,7 @@ el contrato se cobra.
 ## Checklist de caceria (una tarde)
 
 - [ ] Google Maps: "dealership", "rent a car", "alarmas", "HVAC" en Bayamon,
-      Guaynabo, Carolina -> lista de 20 empresas con telefono
+      Guaynabo, San Juan, Dorado -> lista de 20 empresas con telefono
 - [ ] Priorizar las que se vean con flota en las fotos del perfil
 - [ ] Llamada o visita con la carta impresa (NUNCA WhatsApp frio)
 - [ ] Ofrecer SIEMPRE la unidad de prueba gratis como puerta

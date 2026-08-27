@@ -71,8 +71,7 @@ Te confirmo por aqui y listo. No hay deposito.
 
 ### /zona
 ```
-Cubrimos Bayamon, Guaynabo, San Juan, Carolina, Toa Baja, Catano
-y Trujillo Alto.
+Cubrimos Bayamon, Guaynabo, San Juan y Dorado.
 
 Si tu pueblo no aparece, mandalo igual: a veces se puede coordinar.
 ```
