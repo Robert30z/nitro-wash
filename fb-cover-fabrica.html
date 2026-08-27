@@ -2,33 +2,34 @@
 <html><head><meta charset="utf-8"><style>
 @font-face{font-family:'BC';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700}
 *{margin:0;box-sizing:border-box}
-/* 1640x624 = 2x de lo que Facebook pinta (820x312). El movil recorta los
-   lados y deja solo la franja del centro, y en escritorio la foto de perfil
-   se monta sobre la esquina de abajo a la izquierda. Todo lo que se lee vive
-   dentro de esos dos limites. */
+/* 1640x624 = 2x de lo que Facebook pinta (820x312). El movil recorta los lados
+   y en escritorio la foto de perfil se monta sobre la esquina inferior
+   izquierda. Todo lo que se lee vive dentro de esos dos limites. */
 body{width:1640px;height:624px;background:#0D0F12;font-family:'BC',sans-serif;overflow:hidden;position:relative}
-.linea{position:absolute;height:4px;background:linear-gradient(90deg,transparent,#3FB4EF55,#FF6B1A66,transparent);width:130%}
+.linea{position:absolute;height:4px;background:linear-gradient(90deg,transparent,#06ADFD55,#FD6F0D66,transparent);width:130%}
 .l1{top:78px;left:-140px;transform:rotate(-2deg)}
 .l2{bottom:66px;right:-160px;transform:rotate(-2deg)}
 .cuadros{position:absolute;top:40px;right:-60px;width:360px;height:64px;background:conic-gradient(#fff 0 25%,transparent 0 50%,#fff 0 75%,transparent 0) 0 0/32px 32px;opacity:.13;transform:skewX(-18deg)}
 .cuadros2{position:absolute;bottom:52px;right:-40px;width:280px;height:44px;background:conic-gradient(#fff 0 25%,transparent 0 50%,#fff 0 75%,transparent 0) 0 0/22px 22px;opacity:.08;transform:skewX(-18deg)}
-.bloque{position:absolute;left:541px;top:50%;transform:translateY(-50%)}
-.marca{font-size:112px;font-style:italic;font-weight:700;line-height:.9;color:#F4F6F8;text-transform:uppercase;white-space:nowrap}
-.marca b{color:#FF6B1A}
-.sub{margin-top:14px;font-size:32px;letter-spacing:.28em;color:#B8E62E;text-transform:uppercase}
-.pais{margin-top:10px;font-size:28px;letter-spacing:.16em;color:#A7B0BA;text-transform:uppercase}
-.cta{margin-top:24px;display:inline-block;font-size:32px;color:#14100C;background:#FF6B1A;padding:14px 28px;border-radius:12px;letter-spacing:.05em;text-transform:uppercase}
-.precios{margin-top:22px;font-size:38px;font-weight:700;color:#F4F6F8;letter-spacing:.02em}
-.precios span{display:inline-block;margin-top:10px;font-size:26px;color:#A7B0BA;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
+.fila{position:absolute;left:420px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:46px}
+.marca img{height:330px;display:block}
+.info{padding-top:6px}
+.sub{font-size:30px;letter-spacing:.26em;color:#CBFF2E;text-transform:uppercase}
+.pais{margin-top:12px;font-size:26px;letter-spacing:.14em;color:#A7B0BA;text-transform:uppercase}
+.cta{margin-top:24px;display:inline-block;font-size:32px;color:#14100C;background:#FD6F0D;padding:16px 30px;border-radius:12px;letter-spacing:.03em;text-transform:uppercase}
+.precios{margin-top:22px;font-size:34px;font-weight:700;color:#F4F6F8;letter-spacing:.02em}
+.precios span{display:block;margin-top:8px;font-size:24px;color:#A7B0BA;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
 </style></head>
 <body>
 <div class="linea l1"></div><div class="linea l2"></div>
 <div class="cuadros"></div><div class="cuadros2"></div>
-<div class="bloque">
-  <div class="marca"><b>Nitro</b> Wash</div>
-  <div class="sub">Mobile Detailing</div>
-  <div class="pais">Bayamon · Area Metro · Puerto Rico</div>
-  <div class="cta">Texto al (787) 547-9549</div>
-  <div class="precios">Desde $70 · desde $150 · desde $250<br><span>Al dia · A fondo · Blindado</span></div>
+<div class="fila">
+  <div class="marca"><img src="assets/logo.png" alt="Nitro Wash"></div>
+  <div class="info">
+    <div class="sub">Mobile Detailing</div>
+    <div class="pais">Bayamon · Guaynabo · San Juan · Dorado</div>
+    <div class="cta">Texto al (787) 547-9549</div>
+    <div class="precios">Desde $70 · desde $150 · desde $250<span>Al dia · A fondo · Blindado</span></div>
+  </div>
 </div>
 </body></html>

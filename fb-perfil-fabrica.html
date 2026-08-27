@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:'BC';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700}
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1080px;background:#0D0F12;font-family:'BC',sans-serif;overflow:hidden;position:relative}
+/* el disco: FB recorta en circulo, asi que nada vive en las esquinas */
+.disco{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:
+  radial-gradient(120% 120% at 30% 12%, #1B2028 0%, #0D0F12 62%)}
+.cuadros{position:absolute;top:-40px;left:-60px;width:1300px;height:150px;
+  background:conic-gradient(#fff 0 25%,transparent 0 50%,#fff 0 75%,transparent 0) 0 0/54px 54px;
+  opacity:.10;transform:rotate(-14deg)}
+.linea{position:absolute;height:6px;width:150%;left:-25%;
+  background:linear-gradient(90deg,transparent,#3FB4EF66,#FF6B1A88,transparent);transform:rotate(-14deg)}
+.l1{top:250px}
+.l2{bottom:236px}
+.centro{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.mono{font-size:430px;font-style:italic;font-weight:700;line-height:.82;color:#F4F6F8;letter-spacing:-.02em}
+.mono b{color:#FF6B1A}
+.barra{width:430px;height:14px;background:#B8E62E;margin-top:34px;transform:skewX(-18deg)}
+.pie{margin-top:30px;font-size:54px;letter-spacing:.30em;color:#A7B0BA;text-transform:uppercase}
+</style></head>
+<body>
+  <div class="disco">
+    <div class="cuadros"></div>
+    <div class="linea l1"></div><div class="linea l2"></div>
+    <div class="centro">
+      <div class="mono"><b>N</b>W</div>
+      <div class="barra"></div>
+      <div class="pie">Nitro Wash</div>
+    </div>
+  </div>
+</body></html>
