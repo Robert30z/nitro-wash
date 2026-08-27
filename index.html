@@ -64,7 +64,8 @@ a{color:inherit}
 .nav{position:sticky;top:0;z-index:50;background:rgba(13,15,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
 .marca{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
-.marca img{height:44px;width:auto}
+.marca img{height:52px;width:auto}
+.marca .wordmark{font-size:22px}
 .wordmark{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:26px;letter-spacing:.02em;line-height:1;color:#fff;font-style:italic;text-transform:uppercase;white-space:nowrap}
 .wordmark b{color:var(--nitro)}
 .nav-links{display:flex;gap:22px;align-items:center}
@@ -198,6 +199,8 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
   .hero{grid-template-columns:1fr;padding-top:36px}
   .paks,.pasos{grid-template-columns:1fr}
   .nav-in{gap:10px}
+  .marca img{height:40px}
+  .marca .wordmark{font-size:19px}
   .nav-links{gap:16px;margin-left:auto}
   .contacto{grid-template-columns:1fr}
 }
@@ -240,9 +243,10 @@ footer{border-top:1px solid var(--linea);margin-top:58px;padding:22px 0;font-siz
 
 <nav class="nav">
   <div class="env nav-in">
-    <!-- LOGO: reemplazar el wordmark por
-         <img src="assets/logo.png" alt="Nitro Wash - Mobile Detailing"> cuando llegue el archivo -->
-    <a class="marca" href="#">
+    <a class="marca" href="#" aria-label="Nitro Wash, mobile detailing, inicio">
+      <img src="assets/logo-nav.webp"
+           srcset="assets/logo-nav.webp 1x, assets/logo-nav@2x.webp 2x"
+           width="260" height="216" alt="" decoding="async">
       <span class="wordmark"><b>Nitro</b> Wash</span>
     </a>
     <div class="nav-links">
