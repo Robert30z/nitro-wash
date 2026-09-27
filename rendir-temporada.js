@@ -1,11 +1,11 @@
 // Rinde el post de temporada. Misma receta que hacer-fb.js.
 function cargarPlaywright() {
-  const rutas = ['playwright', 'C:/Users/Roberto Mendez/ShopFlow/test/node_modules/playwright'];
+  const rutas = ['playwright', 'C:/Users/User/ShopFlow/test/node_modules/playwright'];
   for (const r of rutas) { try { return require(r); } catch (e) {} }
   throw new Error('No encontre playwright.');
 }
 const { chromium } = cargarPlaywright();
-const base = 'C:/Users/Roberto Mendez/Desktop/HQ/Nitro-Wash';
+const base = 'C:/Users/User/Desktop/HQ/Nitro-Wash';
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });

@@ -1,11 +1,11 @@
 // Rinde los dos assets de la pagina de Facebook: portada y foto de perfil.
 function cargarPlaywright() {
-  const rutas = ['playwright', 'C:/Users/Roberto Mendez/ShopFlow/test/node_modules/playwright'];
+  const rutas = ['playwright', 'C:/Users/User/ShopFlow/test/node_modules/playwright'];
   for (const r of rutas) { try { return require(r); } catch (e) {} }
   throw new Error('No encontre playwright. Instalalo o arregla la ruta aqui arriba.');
 }
 const { chromium } = cargarPlaywright();
-const base = 'C:/Users/Roberto Mendez/Desktop/HQ/Nitro-Wash';
+const base = 'C:/Users/User/Desktop/HQ/Nitro-Wash';
 const piezas = [
   { html: 'fb-cover-fabrica.html',  png: 'fb-cover.png',  w: 1640, h: 624 },
   { html: 'fb-post-lanzamiento-fabrica.html', png: 'fb-post-lanzamiento.png', w: 1080, h: 1350 },
