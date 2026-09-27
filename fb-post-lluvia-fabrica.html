@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:'BC';src:url('fuentes/bc-bold.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'BC';src:url('fuentes/bc-semi.woff2') format('woff2');font-weight:600}
+*{margin:0;box-sizing:border-box}
+/* 1080x1350: mismo formato 4:5 que el post de lanzamiento */
+body{width:1080px;height:1350px;background:#0D0F12;font-family:'BC',sans-serif;overflow:hidden;position:relative;
+  display:flex;flex-direction:column;justify-content:space-between;padding:78px 72px 68px}
+
+/* LA FIRMA: agua perlando sobre pintura sellada (pieza #5 del banco).
+   Sale del mundo del propio negocio, no de un catalogo.
+   Va detras del texto y se desvanece por arriba y por abajo: sin bordes duros,
+   porque un rectangulo con filo se lee como una estampa pegada, no como chapa. */
+.chapa{position:absolute;inset:0;
+  background:linear-gradient(168deg,#151A20 0%,#10151B 46%,#0D1116 72%,#0D0F12 100%);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 62%,transparent 84%)}
+.brillo{position:absolute;inset:0;
+  background:linear-gradient(104deg,transparent 30%,#06ADFD10 44%,#F4F6F812 50%,#06ADFD10 56%,transparent 70%);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%,#000 60%,transparent 80%)}
+#gotas{position:absolute;inset:0;
+  -webkit-mask-image:linear-gradient(180deg,transparent 4%,#000 24%,#000 58%,transparent 78%)}
+/* Gota de verdad: achatada, con el reflejo especular arriba a la izquierda y
+   una sombra corta abajo. Una esfera con centro oscuro se lee como burbuja de jabon. */
+.gota{position:absolute;border-radius:50%;
+  background:radial-gradient(46% 40% at 33% 26%,#FFFFFFE0 0%,#FFFFFF66 30%,#FFFFFF00 62%),
+             radial-gradient(88% 84% at 56% 62%,#8FB6D42B 0%,#5C7F9E18 54%,#0D0F1200 78%);
+  box-shadow:inset 0 -2px 5px #FFFFFF1F, 0 3px 7px #00000047}
+.centro{position:relative;z-index:3}
+.marca{font-size:104px;font-style:italic;font-weight:700;line-height:.9;color:#F4F6F8;text-transform:uppercase}
+.marca b{color:#FD6F0D}
+.sub{margin-top:16px;font-size:27px;letter-spacing:.3em;color:#CBFF2E;text-transform:uppercase}
+.abre{font-size:80px;font-style:italic;font-weight:700;line-height:1.02;color:#F4F6F8;text-transform:uppercase;
+  text-shadow:0 2px 26px #0D0F12}
+.abre em{font-style:italic;color:#FD6F0D}
+.dice{margin-top:30px;font-weight:600;font-size:35px;line-height:1.45;color:#A7B0BA;max-width:830px;
+  text-shadow:0 2px 20px #0D0F12}
+.dice s{text-decoration:none;color:#F4F6F8}
+.pie{position:relative;z-index:3}
+.precio{font-size:44px;font-weight:700;color:#F4F6F8}
+.precio span{font-size:26px;color:#A7B0BA;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
+.cta{margin-top:26px;display:inline-block;font-size:40px;color:#14100C;background:#FD6F0D;padding:24px 42px;border-radius:16px;letter-spacing:.03em;text-transform:uppercase}
+</style></head>
+<body>
+  <div class="chapa"></div><div class="brillo"></div>
+  <div id="gotas"></div>
+  <div class="centro">
+    <div class="marca"><b>Nitro</b> Wash</div>
+    <div class="sub">Mobile Detailing</div>
+  </div>
+  <div class="centro">
+    <div class="abre">¿Y si<br><em>llueve?</em></div>
+    <div class="dice">Su cita <s>no se pierde</s>. Llevamos toldo para trabajo ligero, y si el tiempo no da, se reagenda sin costo.</div>
+  </div>
+  <div class="pie">
+    <div class="precio">Al día desde $70 &nbsp;<span>a donde esté el carro</span></div>
+    <div class="cta">Texto al (787) 547-9549</div>
+  </div>
+<script>
+// Semilla fija: el PNG sale identico cada vez que se rinde.
+let s = 20260905;
+const rnd = () => (s = (s * 1103515245 + 12345) % 2147483648) / 2147483648;
+const cont = document.getElementById('gotas');
+const puestas = [];
+for (let i = 0; i < 700 && puestas.length < 190; i++) {
+  const d = 8 + Math.pow(rnd(), 2.3) * 44;           // muchas chicas, pocas grandes
+  const x = rnd() * (1080 - d);
+  const y = 40 + rnd() * (1240 - d);
+  // sin encimarse: dos gotas pegadas se leen como una mancha, no como agua
+  if (puestas.some(p => Math.hypot(p.x + p.d/2 - (x + d/2), p.y + p.d/2 - (y + d/2)) < (p.d + d)/2 + 8)) continue;
+  puestas.push({x, y, d});
+  const g = document.createElement('div');
+  g.className = 'gota';
+  g.style.cssText = `left:${x}px;top:${y}px;width:${d}px;height:${d * 0.88}px`;
+  cont.appendChild(g);
+}
+document.title = puestas.length + ' gotas';
+</script>
+</body></html>

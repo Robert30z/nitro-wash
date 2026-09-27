@@ -1,0 +1,12 @@
+[
+ {"nombre":"marca blanca sobre el fondo mas claro",   "fg":"#F4F6F8","bg":"#151A20","min":3},
+ {"nombre":"marca naranja sobre el fondo mas claro",  "fg":"#FD6F0D","bg":"#151A20","min":3},
+ {"nombre":"sub lima sobre el fondo mas claro",       "fg":"#CBFF2E","bg":"#151A20","min":4.5},
+ {"nombre":"titular blanco sobre el fondo mas claro", "fg":"#F4F6F8","bg":"#151A20","min":3},
+ {"nombre":"titular naranja sobre el fondo mas claro","fg":"#FD6F0D","bg":"#151A20","min":3},
+ {"nombre":"cuerpo gris sobre el fondo mas claro",    "fg":"#A7B0BA","bg":"#151A20","min":4.5},
+ {"nombre":"cuerpo resaltado sobre el fondo claro",   "fg":"#F4F6F8","bg":"#151A20","min":4.5},
+ {"nombre":"precio blanco sobre el fondo base",       "fg":"#F4F6F8","bg":"#0D0F12","min":3},
+ {"nombre":"precio etiqueta gris sobre fondo base",   "fg":"#A7B0BA","bg":"#0D0F12","min":4.5},
+ {"nombre":"texto del boton sobre naranja",           "fg":"#14100C","bg":"#FD6F0D","min":4.5}
+]
